@@ -4,9 +4,9 @@ function breakStatement(num) {
   // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y retornar el string: "Se interrumpió la ejecución".
   // Tu código:
   
-  var c = 0
+  var c = num
   var tabla = []
-  for (let index = 1; index < 10; index++) {
+  for (let index = 0; index < 10; index++) {
     c = c + 2;
     tabla.push (c);
   if (c === index) break;
@@ -17,4 +17,5 @@ function breakStatement(num) {
   return (tabla)
 }
 
+console.log(breakStatement(50));
 module.exports = breakStatement;

@@ -10,7 +10,7 @@ function esNumeroPrimo(numero) {
   while (numero % i !==0 && i < numero/2){
     i++;
   }
-  if (numero % i === 0){
+  if (numero % i === 0 && numero !==2){
     return (false)
   }
   return (true)

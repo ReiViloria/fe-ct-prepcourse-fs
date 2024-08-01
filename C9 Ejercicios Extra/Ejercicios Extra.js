@@ -1,4 +1,4 @@
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/  // npm run jest extraExercises.test.js
 
 function deObjetoAarray(objeto) {
   // Recibes un objeto. Tendrás que crear un arreglo de arreglos.
@@ -6,7 +6,33 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
+  
+  
+   var arraygrande = [];
+  var array2 = [];
+  for (const key in objeto) {
+    array2.push (key, objeto[key]);
+    arraygrande.push (array2);
+    array2 = [];
+  }
+  return arraygrande
+ 
+  // OTRO METODO
+  // var array = Object.keys (objeto) ;
+ // var arraygrande = [];
+ // var array2 = []; 
+ // i = 0
+  //while (i < array.length) {
+   // propiedad = array[i];
+ //   array2.push (array[i], objeto[propiedad]);
+   // arraygrande.push (array2);
+  //  array2 = [];
+  //  i++;
+  //}
+  // return arraygrande
+   
 }
+console.log(deObjetoAarray({D: 1, B: 2, C: 3}));
 
 function numberOfCharacters(string) {
   // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
